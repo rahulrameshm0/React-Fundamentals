@@ -9,12 +9,15 @@ import { Greeting } from "./Greeting";
 import { CardWrapper } from "./CardWrapper";
 import { UserDetails } from "./Userdetails";
 import { ProductList } from "./ProductList";
+import { NameList } from "./NameList";
+
 
 function App() {
   return (
     <div>
+      <NameList />
       <ProductList />
-      
+
       <UserDetails
         name="James"
         isOnline={true}
