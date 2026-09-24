@@ -12,9 +12,18 @@ import { ProductList } from "./ProductList";
 import { NameList } from "./NameList";
 import { Alert } from "./Alert";
 import { NewButton } from "./NewButton";
+import { CustomButton } from "./CustomButton";
+import { NewsLetter } from "./NewsLetter";
+import { Contacts } from "./Contacts";
+
+
 function App() {
   return (
     <div>
+      <NewsLetter/>
+      <Contacts/>
+      
+      <CustomButton/>
 
       <Alert>Your changes has been saved</Alert>
       <Alert type="error">Something went wrong</Alert>
