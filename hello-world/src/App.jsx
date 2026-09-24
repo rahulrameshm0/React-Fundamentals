@@ -10,11 +10,17 @@ import { CardWrapper } from "./CardWrapper";
 import { UserDetails } from "./Userdetails";
 import { ProductList } from "./ProductList";
 import { NameList } from "./NameList";
-
-
+import { Alert } from "./Alert";
+import { NewButton } from "./NewButton";
 function App() {
   return (
     <div>
+
+      <Alert>Your changes has been saved</Alert>
+      <Alert type="error">Something went wrong</Alert>
+
+      <NewButton/>
+
       <NameList />
       <ProductList />
 
