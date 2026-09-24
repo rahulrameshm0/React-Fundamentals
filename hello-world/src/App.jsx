@@ -15,11 +15,13 @@ import { NewButton } from "./NewButton";
 import { CustomButton } from "./CustomButton";
 import { NewsLetter } from "./NewsLetter";
 import { Contacts } from "./Contacts";
-
+import { Menu } from "./Menu";
 
 function App() {
   return (
     <div>
+      <Menu/>
+
       <NewsLetter/>
       <Contacts/>
       
