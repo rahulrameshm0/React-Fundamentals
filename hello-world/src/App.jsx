@@ -18,15 +18,21 @@ import { Contacts } from "./Contacts";
 import { Menu } from "./Menu";
 import { Counter } from "./Counter";
 import { LoginCard } from "./LoginCard";
+import { SimplerCounter } from "./SimplerCounter";
+
 
 function App() {
   return (
-    <div>
-      <LoginCard/>
-      <Counter/>
-      <Counter/>
+    <>
 
-      {/* <Menu/>
+      <SimplerCounter/>
+      
+      {/*
+      <LoginCard />
+      <Counter />
+      <Counter />
+
+       <Menu/>
 
       <NewsLetter/>
       <Contacts/>
@@ -78,7 +84,7 @@ function App() {
       <UserProfile />
       <Hello />
       <ContactForm /> */}
-    </div>
+    </>
   );
 }
 
