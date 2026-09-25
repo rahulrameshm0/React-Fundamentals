@@ -16,11 +16,15 @@ import { CustomButton } from "./CustomButton";
 import { NewsLetter } from "./NewsLetter";
 import { Contacts } from "./Contacts";
 import { Menu } from "./Menu";
+import { Counter } from "./Counter";
+
 
 function App() {
   return (
     <div>
-      <Menu/>
+      <Counter/>
+
+      {/* <Menu/>
 
       <NewsLetter/>
       <Contacts/>
@@ -66,12 +70,12 @@ function App() {
       <Welcome name="Aegon" alias="The Concurer" />
       <Welcome name="Daemon" alias="The Husband of the Queen" />
 
-      <Hello />
       <HelloWithoutJSX />
       <h1>Code testing in react app</h1>
       <Button />
       <UserProfile />
-      <ContactForm />
+      <Hello />
+      <ContactForm /> */}
     </div>
   );
 }
