@@ -17,11 +17,13 @@ import { NewsLetter } from "./NewsLetter";
 import { Contacts } from "./Contacts";
 import { Menu } from "./Menu";
 import { Counter } from "./Counter";
-
+import { LoginCard } from "./LoginCard";
 
 function App() {
   return (
     <div>
+      <LoginCard/>
+      <Counter/>
       <Counter/>
 
       {/* <Menu/>
