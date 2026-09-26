@@ -19,15 +19,15 @@ import { Menu } from "./Menu";
 import { Counter } from "./Counter";
 import { LoginCard } from "./LoginCard";
 import { SimplerCounter } from "./SimplerCounter";
-
+import { PrevStateCount } from "./PreStateCount";
 
 function App() {
   return (
     <>
 
-      <SimplerCounter/>
-      
+      <PrevStateCount/>
       {/*
+      <SimplerCounter/>
       <LoginCard />
       <Counter />
       <Counter />
