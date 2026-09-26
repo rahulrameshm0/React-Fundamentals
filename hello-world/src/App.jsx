@@ -20,13 +20,15 @@ import { Counter } from "./Counter";
 import { LoginCard } from "./LoginCard";
 import { SimplerCounter } from "./SimplerCounter";
 import { PrevStateCount } from "./PreStateCount";
+import { BatchingCounter } from "./BatchingCounter";
+
 
 function App() {
   return (
     <>
-
-      <PrevStateCount/>
+    <BatchingCounter/>
       {/*
+      <PrevStateCount/>
       <SimplerCounter/>
       <LoginCard />
       <Counter />
