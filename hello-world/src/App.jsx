@@ -21,12 +21,14 @@ import { SimplerCounter } from "./SimplerCounter";
 import { PrevStateCount } from "./PreStateCount";
 import { BatchingCounter } from "./BatchingCounter";
 import { UserProfile } from "./UserProfile";
+import { ToDoList } from "./ToDoList";
 
 function App() {
   return (
     <>
-    <UserProfile/>
+    <ToDoList/>
       {/*
+    <UserProfile/>
     <BatchingCounter/>
       <PrevStateCount/>
       <SimplerCounter/>
