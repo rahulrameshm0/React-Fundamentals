@@ -2,7 +2,6 @@ import "./App.css";
 import { Welcome } from "./Welcome";
 import { Button } from "./Button";
 import { Hello, HelloWithoutJSX } from "./Hello";
-import { UserProfile } from "./UserProfile";
 import { ContactForm } from "./Contact";
 import { Product } from "./Product";
 import { Greeting } from "./Greeting";
@@ -21,13 +20,14 @@ import { LoginCard } from "./LoginCard";
 import { SimplerCounter } from "./SimplerCounter";
 import { PrevStateCount } from "./PreStateCount";
 import { BatchingCounter } from "./BatchingCounter";
-
+import { UserProfile } from "./UserProfile";
 
 function App() {
   return (
     <>
-    <BatchingCounter/>
+    <UserProfile/>
       {/*
+    <BatchingCounter/>
       <PrevStateCount/>
       <SimplerCounter/>
       <LoginCard />
@@ -83,7 +83,6 @@ function App() {
       <HelloWithoutJSX />
       <h1>Code testing in react app</h1>
       <Button />
-      <UserProfile />
       <Hello />
       <ContactForm /> */}
     </>
