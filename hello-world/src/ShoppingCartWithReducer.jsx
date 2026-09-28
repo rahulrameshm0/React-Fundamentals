@@ -7,7 +7,8 @@ const initialState = {
 };
 
 const reducer = (state, action) => {
-  switch (action.type) {
+    console.log("Action: ",action)
+    switch (action.type) {
     case "ADD_ITEM": {
       const existingItemIndex = state.items.findIndex(
         (item) => item.id === action.payload.id,
@@ -38,6 +39,7 @@ const reducer = (state, action) => {
           (total, item) => total + item.price * item.quantity,
           0,
         ),
+
         totalItems: updatedItems.reduce(
           (total, item) => total + item.quantity,
           0,
@@ -46,7 +48,7 @@ const reducer = (state, action) => {
     }
 
     case "REMOVE_ITEM": {
-      const filterItems = state.item.filter(
+      const filterItems = state.items.filter(
         (item) => item.id !== action.payload.id,
       );
 
@@ -63,6 +65,36 @@ const reducer = (state, action) => {
           0,
         ),
       };
+    }
+
+    case "UPDATE_QUANTITY": {
+      if (action.payload.quantity === 0) {
+        return reducer(state, {
+          type: "REMOVE_ITEM",
+          payload: { id: action.payload.id },
+        });
+      }
+
+      const updatedQuantityItems = state.items.map((item) =>
+        item.id === action.payload.id
+          ? { ...item, quantity: action.payload.quantity }
+          : item,
+      );
+      return {
+        ...state,
+        items: updatedQuantityItems,
+        totalAmount: updatedQuantityItems.reduce(
+          (total, item) => total + total.price * item.quantity,
+          0,
+        ),
+        totalItems: updatedQuantityItems.reduce(
+          (total, item) => total + item.quantity,
+          0,
+        ),
+      };
+    }
+    case "CLEAR_CART": {
+      return initialState;
     }
     default:
       return state;
@@ -103,7 +135,6 @@ export const ShoppingCartWithReducer = () => {
         <h2>Shoping Cart</h2>
         {state.items.length === 0 ? (
           <p>Your Cart is Empty</p>
-
         ) : (
           <div>
             {state.items.map((item) => (
@@ -112,15 +143,32 @@ export const ShoppingCartWithReducer = () => {
                   {item.name} - ${item.price} X {item.quantity}
                 </p>
                 <button onClick={() => dispatch({
-                    remove: "REMOVE_ITEM",
-                    payload: {id: item.id}
-                })}>Remove</button>
+                    type: "UPDATE_QUANTITY",
+                    payload: {id: item.id, quantity: item.quantity + 1},
+                })}>+</button>
+                <button
+                  onClick={() =>
+                    dispatch({
+                      type: "REMOVE_ITEM",
+                      payload: { id: item.id },
+                    })
+                  }
+                >
+                  Remove
+                </button>
               </div>
             ))}
           </div>
         )}
         <h3>Total items: {state.totalItems}</h3>
         <h3>Total items: {state.totalAmount.toFixed(2)}</h3>
+        {
+            state.items.length > 0 && (
+                <button onClick={() => dispatch({
+                    type: "CLEAR_CART"
+                })}>CLEAR CART</button>
+            )
+        }
       </div>
     </div>
   );
