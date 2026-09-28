@@ -24,13 +24,15 @@ import { UserProfile } from "./UserProfile";
 import { ToDoList } from "./ToDoList";
 import { ShoppingCart } from "./ShoppingCart";
 import { CounterWithReducer } from "./CounterWithReducer";
+import { ShoppingCartWithReducer } from "./ShoppingCartWithReducer";
 
 function App() {
   return (
     <>
-    <CounterWithReducer />
+      <ShoppingCartWithReducer/>
       {/*
     <ShoppingCart />
+    <CounterWithReducer />
     <ToDoList/>
     <UserProfile/>
     <BatchingCounter/>
