@@ -23,12 +23,14 @@ import { BatchingCounter } from "./BatchingCounter";
 import { UserProfile } from "./UserProfile";
 import { ToDoList } from "./ToDoList";
 import { ShoppingCart } from "./ShoppingCart";
+import { CounterWithReducer } from "./CounterWithReducer";
 
 function App() {
   return (
     <>
-    <ShoppingCart />
+    <CounterWithReducer />
       {/*
+    <ShoppingCart />
     <ToDoList/>
     <UserProfile/>
     <BatchingCounter/>
