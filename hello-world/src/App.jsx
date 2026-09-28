@@ -22,12 +22,14 @@ import { PrevStateCount } from "./PreStateCount";
 import { BatchingCounter } from "./BatchingCounter";
 import { UserProfile } from "./UserProfile";
 import { ToDoList } from "./ToDoList";
+import { ShoppingCart } from "./ShoppingCart";
 
 function App() {
   return (
     <>
-    <ToDoList/>
+    <ShoppingCart />
       {/*
+    <ToDoList/>
     <UserProfile/>
     <BatchingCounter/>
       <PrevStateCount/>
