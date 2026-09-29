@@ -25,19 +25,20 @@ import { ToDoList } from "./ToDoList";
 import { ShoppingCart } from "./ShoppingCart";
 import { CounterWithReducer } from "./CounterWithReducer";
 import { ShoppingCartWithReducer } from "./ShoppingCartWithReducer";
-
+import { CounterWithInit } from "./CounterWithInit";
 function App() {
   return (
     <>
-      <ShoppingCartWithReducer/>
+    <CounterWithInit />
       {/*
     <ShoppingCart />
+    <ShoppingCartWithReducer/>
     <CounterWithReducer />
     <ToDoList/>
     <UserProfile/>
     <BatchingCounter/>
-      <PrevStateCount/>
-      <SimplerCounter/>
+    <PrevStateCount/>
+    <SimplerCounter/>
       <LoginCard />
       <Counter />
       <Counter />
